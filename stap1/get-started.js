@@ -19,7 +19,7 @@ function onClick() {
   updateLabel();
 }
 function inputsAreEmpty() {
-  if (getNumber1() === '' || getNumber2() === '') {
+  if (getNumber1() === '' || getNumber1() === NULL|| getNumber2() === '' || getNumber2() === NULL) {
     return true;
   } else {
     return false;
@@ -28,8 +28,8 @@ function inputsAreEmpty() {
 function updateLabel() {
   var addend1 = getNumber1();
   var addend2 = getNumber2();
-  var sum = addend1 + addend2;
-  label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;
+  var sum = (addend1 + addend2);
+  label.textContent = (addend1 + addend2) + ' = ' + sum;
 }
 function getNumber1() {
   return inputs[0].value;
