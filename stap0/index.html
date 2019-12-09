@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Fouten opsporen</title>
-</head>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fouten opsporen</title>
+
+        <meta name="author" content="de heer Hidde Braun en de heer Leroy Andrade">
+        <meta name="content" content="Opdracht debuggen">
+        <meta name="description" content="Periode2, opdracht1">
+        <meta name="keywords" content="Omgaan met debuggen">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fouten opsporen</title>
+
+    </head>
 <body>
 
 
-<div id = "answer">hier komt het antwoord</div>
+<div id="answer">hier komt het antwoord</div>
 <script>
     let a = "1";
     let b = 2;
-    let c = a+b;
+    let c = parseInt(a)+b;
     let answer = document.getElementById("answer");
     if (c == 3){
-        asnwer.innerHTML = c;
+        answer.innerHTML = c;
+        console.log("Het antwoord is correct. Het juiste nummer is" +c);
     }
+    else console.log("Het angwoord is geen 3.")
 </script>
 
 
@@ -24,6 +34,5 @@
 <button>Voer de loops uit</button>
 <p></p>
 
-<script src="debugging.js"></script>
 </body>
 </html>
