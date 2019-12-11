@@ -21,24 +21,28 @@ function onClick() {
 function inputsAreEmpty() {
   if (getNumber1() === '' || getNumber2() === '') {
     return true;
-  } else {
-    return false;
-  }
+  } else return false;
+
 }
 function updateLabel() {
-  var addend1 = getNumber1();
-  var addend2 = getNumber2();
-  var sum=(parseInt(addend1) + parseInt(addend2));//var sum = addend1 + addend2;
-  label.textContent = "addend1" + ' + ' + "addend2" + ' = ' + sum;
-  console.log(parseInt(addend1) + parseInt(addend2));
+  let addend1=getNumber1();
+  let addend2=getNumber2();
+//  let sum = addend1.toFixed(2) + parseInt(addend2).toFixed(2);//var sum = addend1 + addend2;
+
+let nCount = (addend1+addend2);
+let sumTotaal = nCount.toFixed(2);
+
+//  label.textContent = "addend1" + ' + ' + "addend2" + ' = ' + sum.toFixed(2);
+
+console.log(sumTotaal);
 }
 function getNumber1() {
-  return inputs[0].value;
+ return parseFloat(inputs[0].value);
 }
 function getNumber2() {
-  return inputs[1].value;
+  return parseFloat(inputs[1].value);
 }
-var inputs = document.querySelectorAll('input');
-var label = document.querySelector('p');
-var button = document.querySelector('button');
+let inputs = document.querySelectorAll('input');
+let label = document.querySelector('p');
+let button = document.querySelector('button');
 button.addEventListener('click', onClick);
